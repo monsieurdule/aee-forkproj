@@ -24,5 +24,11 @@ pipeline {
                 sh "mvn exec:java"
             }
         }
+
+        post {
+            always {
+                junit(testResults: 'target/surefire-reports/*.xml', allowEmptyResults : true)
+            }
+        }
     }
 }
