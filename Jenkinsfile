@@ -15,7 +15,6 @@ pipeline {
 
             steps{
                 sh "mvn test"
-                junit 'test-results.xml'
             }
         }
 
