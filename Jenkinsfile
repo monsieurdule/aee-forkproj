@@ -6,7 +6,7 @@ pipeline {
 
     post {
             always {
-                junit(testResults: 'forkproj-jenkins-pipeline/target/surefire-reports/*.xml', allowEmptyResults : true)
+                junit(testResults: '/home/jenkins/agent/workspace/forkproj-jenkins-pipeline/target/surefire-reports/*.xml', allowEmptyResults : true)
             }
         }
         
