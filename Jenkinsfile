@@ -3,7 +3,7 @@ pipeline {
     agent any
 
     tools {
-        maven-forkproj
+        maven-forkproj 'Maven 3.8.6'
     }
 
     stages {
