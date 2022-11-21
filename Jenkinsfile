@@ -18,7 +18,6 @@ pipeline {
                 junit(testResults: '/home/jenkins/agent/workspace/forkproj-jenkins-pipeline/target/surefire-reports/*.xml', allowEmptyResults : true)
             }
         }
-    }
 
         stage("run") {
 
@@ -26,5 +25,6 @@ pipeline {
                 sh "mvn exec:java"
             }
         }
+    }
 
 }
