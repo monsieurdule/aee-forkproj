@@ -25,10 +25,10 @@ pipeline {
             }
         }
 
-        post {
+    }
+    post {
             always {
                 junit(testResults: 'reports/*.xml', allowEmptyResults : true)
             }
         }
-    }
 }
