@@ -5,21 +5,21 @@ pipeline {
     stages {
         stage("compile") {
             steps {
-                mvn compile
+                sh "mvn compile"
             }
         }
 
         stage("test") {
 
             steps{
-                mvn test
+                sh "mvn test"
             }
         }
 
         stage("run") {
 
             steps{
-                mvn exec:java
+                sh "mvn exec:java"
             }
         }
     }
