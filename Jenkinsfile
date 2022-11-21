@@ -10,12 +10,14 @@ pipeline {
         }
 
         stage("test") {
+
             steps{
                 mvn test
             }
         }
 
-        stage("run"){
+        stage("run") {
+
             steps{
                 mvn exec:java
             }
