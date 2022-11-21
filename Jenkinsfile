@@ -2,10 +2,6 @@ pipeline {
 
     agent any
 
-    tools {
-        maven-forkproj 'Maven 3.8.6'
-    }
-
     stages {
         stage("compile") {
             steps {
