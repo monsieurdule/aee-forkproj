@@ -4,7 +4,6 @@ pipeline {
 
     tools {
         maven-forkproj
-        jdk 'jdk11'
     }
 
     stages {
