@@ -3,12 +3,6 @@ pipeline {
     agent {
         label 'vm'
     }
-
-    post {
-            always {
-                junit(testResults: '/home/jenkins/agent/workspace/forkproj-jenkins-pipeline/target/surefire-reports/*.xml', allowEmptyResults : true)
-            }
-        }
         
     stages {
         stage("compile") {
@@ -21,8 +15,10 @@ pipeline {
 
             steps{
                 sh "mvn test"
+                junit(testResults: '/home/jenkins/agent/workspace/forkproj-jenkins-pipeline/target/surefire-reports/*.xml', allowEmptyResults : true)
             }
         }
+    }
 
         stage("run") {
 
