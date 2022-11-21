@@ -15,7 +15,7 @@ pipeline {
 
             steps{
                 sh "mvn test"
-                junit(testResults: '/home/jenkins/agent/workspace/forkproj-jenkins-pipeline/target/surefire-reports/*.xml', allowEmptyResults : true)
+                junit(testResults: 'target/surefire-reports/*.xml', allowEmptyResults : true)
             }
         }
 
