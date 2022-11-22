@@ -35,3 +35,8 @@ $ mvn archetype:generate \
   -DartifactId=maigolab_hello
 ```
 
+## Jira test
+
+```
+This is commit for Jira test
+```
