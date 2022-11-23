@@ -16,6 +16,7 @@ pipeline {
             steps{
                 sh "mvn test"
                 junit 'target/surefire-reports/*.xml'
+                jiraComment body: 'komentar', issueKey: 'JIR-1'
             }
         }
 
