@@ -28,4 +28,10 @@ pipeline {
         }
     }
 
+    post {
+        success {
+            httpRequest httpMode: 'POST', responseHandle: 'NONE', url: 'http://192.168.10.200:5000/webhook', wrapAsMultipart: false
+        }
+    }
+
 }
