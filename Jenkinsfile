@@ -31,7 +31,10 @@ pipeline {
     post {
         success {
             //httpRequest customHeaders: [[maskValue: false, name: 'build', value: 'success']], httpMode: 'POST', requestBody: '"build" : "success"', responseHandle: 'NONE', url: 'http://192.168.10.200:5000/jenkinshook', wrapAsMultipart: false
-            httpRequest acceptType: 'APPLICATION_JSON', contentType: 'APPLICATION_JSON', httpMode: 'POST', requestBody: '"build" : "success"', responseHandle: 'NONE', url: 'http://192.168.10.200:5001/jenkinshook', wrapAsMultipart: false
+            httpRequest acceptType: 'APPLICATION_JSON', consoleLogResponseBody: true, contentType: 'APPLICATION_JSON', httpMode: 'POST', requestBody: '"build":"success"', responseHandle: 'NONE', url: 'http://192.168.10.200:5001/jenkinshook', validResponseCodes: '200', wrapAsMultipart: false
+            //def response = httpRequest acceptType: 'APPLICATION_JSON', consoleLogResponseBody: true, contentType: 'APPLICATION_JSON', httpMode: 'POST', requestBody: '{"result":"build success"}', responseHandle: 'NONE', url: 'http://192.168.10.200:3537/jenkins', validResponseCodes: '200', wrapAsMultipart: false
+
+
         }
     }
 
