@@ -30,7 +30,7 @@ pipeline {
 
     post {
         success {
-            httpRequest customHeaders: [[maskValue: false, name: 'build', value: 'success']], httpMode: 'POST', requestBody: 'Success', responseHandle: 'NONE', url: 'http://192.168.10.200:5000/jenkinshook', wrapAsMultipart: false
+            httpRequest customHeaders: [[maskValue: false, name: 'build', value: 'success']], httpMode: 'POST', responseHandle: 'NONE', url: 'http://192.168.10.200:5000/jenkinshook', wrapAsMultipart: false
         }
     }
 
